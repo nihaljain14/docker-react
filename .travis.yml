@@ -4,3 +4,6 @@ services:
 
 before_install:
   - docker build -t nj14/docker-react -f Dockerfile.dev . 
+
+script:
+  - docker run -e CI=true nj14/docker-react npm run test 
